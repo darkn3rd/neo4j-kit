@@ -1,0 +1,7 @@
+---
+# common.yml
+- hosts: all
+  gather_facts: yes
+  become: true
+  roles:
+    - common

@@ -1,0 +1,17 @@
+---
+galaxy_info:
+  author: Joaquin Menchaca
+  description: Configures hosts and ssh_config for Vagrant
+  company: Joaqiun Menchaca
+  license: MIT
+  min_ansible_version: 1.2
+  platforms:
+  - name: Ubuntu
+    versions:
+    - trusty
+  galaxy_tags:
+  - development
+  - system
+  - web
+  - vagrant
+dependencies: []

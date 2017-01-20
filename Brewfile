@@ -1,0 +1,8 @@
+tap 'caskroom/cask'
+cask_args appdir: '/Applications'
+cask 'virtualbox'
+cask 'virtualbox-extension-pack'
+cask 'vagrant'
+cask 'docker-toolbox'
+brew 'python'
+brew 'jq'
