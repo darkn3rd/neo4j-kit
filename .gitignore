@@ -1,5 +1,10 @@
-packages/*
+packages/**/
+data/**/
+logs/**/
+logs/*
 !packages/README.md
+!logs/README.md
+!data/README.md
 .vagrant
 *.retry
 .DS_Store
