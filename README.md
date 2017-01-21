@@ -26,14 +26,10 @@ For Mac OS X, there's an install script `./install.sh`, which installs [Homebrew
 
 Otherwise, you can manually run and install the following pieces:
 
-* Vagrant
-   * [VirtualBox](https://www.virtualbox.org/wiki/VirtualBox)
-   * [Vagrant](https://www.vagrantup.com/)
-   * [Ansible](http://docs.ansible.com/ansible/intro_installation.html)
-* Docker
+* Neo4j on Ubuntu (using Vagrant)
+   * [VirtualBox](https://www.virtualbox.org/wiki/VirtualBox), [Vagrant](https://www.vagrantup.com/), [Ansible](http://docs.ansible.com/ansible/intro_installation.html)
+* Neo4j using Docker
    * Mac OS X
-     * [Docker Toolbox](https://www.docker.com/products/docker-toolbox)
-     * [VirtualBox](https://www.virtualbox.org/wiki/VirtualBox)
+     * [Docker Toolbox](https://www.docker.com/products/docker-toolbox), [VirtualBox](https://www.virtualbox.org/wiki/VirtualBox)
    * Linux
-     * [Docker Engine](https://docs.docker.com/engine/installation/)
-     * [Docker Compose](https://docs.docker.com/compose/install/)
+     * [Docker Engine](https://docs.docker.com/engine/installation/), [Docker Compose](https://docs.docker.com/compose/install/)
