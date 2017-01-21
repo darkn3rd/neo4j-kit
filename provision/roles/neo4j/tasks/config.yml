@@ -1,0 +1,9 @@
+---
+- name: Copy Neo4j Configuration
+  copy:
+    src: neo4j.conf
+    dest: /etc/neo4j/neo4j.conf
+    mode: 0644
+    owner: neo4j
+    group: adm
+  notify: restart neo4j

@@ -1,18 +1,3 @@
 ---
-- name: Add Neo4j Public Key
-  apt_key:
-    url: https://debian.neo4j.org/neotechnology.gpg.key
-    state: present
-
-- name: Add Neo4J Repository
-  become: true
-  apt_repository:
-    repo: deb https://debian.neo4j.org/repo stable/
-    state: present
-    filename: neo4j
-
-- name: Install Neo4J Service
-  apt:
-    name: "{{ package_target }}"
-    state: present
-    update_cache: yes
+- include: install.yml
+- include: config.yml
