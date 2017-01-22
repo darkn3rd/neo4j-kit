@@ -1,0 +1,20 @@
+---
+# Install easy_install if not installed
+- name: Test easy_install on Ubuntu
+  shell: which easy_install
+  register: easy_install
+  failed_when: false
+
+- name: Install easy_install
+  apt: name=python-setuptools update_cache=yes
+  when: easy_install.rc >= 1
+
+  # Install pip if not installed
+- name: Test pip
+  shell: which pip
+  register: pip
+  failed_when: false
+
+- name: Install pip
+  easy_install: name=pip state=latest
+  when: pip.rc >= 1
