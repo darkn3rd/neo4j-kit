@@ -1,0 +1,29 @@
+---
+- hosts: neo4j.dev
+  vars:
+    # examples: '3.1-enterprise' or '3.1'
+    version: 3.1
+  gather_facts: yes
+  roles:
+    - role: docker_compose
+      become: yes
+  post_tasks:
+    - name: Copy Docker Compose file
+      copy:
+        src: "/vagrant/{{ item }}"
+        dest: "/home/{{ ansible_ssh_user }}/{{ item }}"
+        remote_src: True
+      with_items:
+        - docker-compose.yml
+        - .env
+    - name: Create Data and Log directories
+      file:
+        path: "/home/{{ ansible_ssh_user }}/{{ item }}"
+        state: directory
+      with_items:
+        - data
+        - logs
+    - name: Start Docker Compose environment
+      shell: "NEO4J_VERSION={{ version }} docker-compose up -d"
+      args:
+         chdir: "/home/{{ ansible_ssh_user }}/"
